@@ -1,5 +1,12 @@
 require_relative '../support/helpers/swipe_helpers.rb'
 class BaseScreen
+
+  #
+  # Classe genérica para armazenar metodos de ambas as plataformas, nao usam metodos
+  # não genéricos e também nao usam identificadores/elementos.
+  # É uma classe para utilizar mais metodos e facilidades dos frameworks Cucumber e Appium
+  #
+  
   include SwipeHelpers
 
   def self.identificator(element_name, &block)
@@ -170,11 +177,4 @@ class BaseScreen
     end
   end
 
-  # rubocop:disable Style/GlobalVars
-  def get_user
-    raise 'credential nao encontrada' if $credential.nil?
-
-    $credential
-  end
-  # rubocop:enable Style/GlobalVars
 end

@@ -15,7 +15,7 @@ screenshots/ios/*
 config/app/
 
 # Caps files
-features/support/caps/*.txt
+# features/support/caps/*.txt
 
 rerun*.txt
 *.log

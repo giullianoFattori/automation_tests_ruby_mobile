@@ -1,4 +1,10 @@
 module SwipeHelpers
+
+  #
+  # Modulo que mantem todos os tipos de swipe/scroll que possam
+  # ser nessessários no processo de desenvolvimento dos testes
+  #
+
   def swipe_to_element(element, speed = 'slow', retries = 15)
     element_count = element_on_screen? element, 2
 

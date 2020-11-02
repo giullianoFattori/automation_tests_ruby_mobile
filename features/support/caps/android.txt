@@ -1,0 +1,15 @@
+[caps]
+  deviceName = "emulator-5554" #ou pode ser outro nome tipo "Samsung Galaxy S10"
+  platformName = "Android"
+  #udid = <CODIGO DO SEU DEVICE FISICO>
+  app = "./config/app/<SEU APK>.apk"
+  newCommandTimeout = 999999
+  language = "pt"
+  locale = "BR"
+  autoGrantPermissions = true
+  noReset = false
+  automationName = "UiAutomator2"
+  adbExecTimeout = 999999
+  useNewWDA = true
+  implicit = 1
+  appWaitActivity = "*.TabActivity"

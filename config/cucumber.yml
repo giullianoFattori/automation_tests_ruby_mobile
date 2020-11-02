@@ -13,6 +13,6 @@ android-report: -p android -f html -o reports/android-report.html
 
 dev: BUILD=develop -t @dev -r features/common/environment/develop
 
-pre: BUILD=preprod -t @pre -r features/common/environment/pre-prod
+hml: BUILD=preprod -t @pre -r features/common/environment/hml
 
 hub: HUB=true -t @done
