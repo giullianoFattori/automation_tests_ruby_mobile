@@ -12,7 +12,7 @@ screenshots/android/*
 screenshots/ios/*
 
 # apps
-config/app/
+# config/app/
 
 # Caps files
 # features/support/caps/*.txt

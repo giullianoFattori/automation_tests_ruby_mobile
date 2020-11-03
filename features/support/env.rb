@@ -1,7 +1,7 @@
 require 'pry'
 require 'appium_lib'
 require_relative File.expand_path('../common/base_screen.rb', __dir__)
-require_relative File.expand_path('../common/modules/autenticador_module', __dir__)
+require_relative File.expand_path('../common/modules/example_module', __dir__)
 
 class AppiumWorld
 end

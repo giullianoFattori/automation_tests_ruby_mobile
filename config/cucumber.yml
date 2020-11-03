@@ -11,8 +11,8 @@ ios-report: -p ios -f html -o reports/ios-report.html
 
 android-report: -p android -f html -o reports/android-report.html
 
-dev: BUILD=develop -t @dev -r features/common/environment/develop
+dev: BUILD=develop -t @dev
 
-hml: BUILD=preprod -t @pre -r features/common/environment/hml
+hml: BUILD=homolog -t @hml 
 
 hub: HUB=true -t @done
