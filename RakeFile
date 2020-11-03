@@ -9,15 +9,6 @@ task :lint do
   system 'bundle exec rubocop'
 end
 
-desc('Start Emulator')
-task :start_emulator, [:emulator_name] do |_task, args|
-  abort "Parameter with name emulator is required! \nExample: rake start_emulator[name_emulator]"\
-    if args[:emulator_name].nil?
-  puts "Starting emulator #{args[:emulator_name]}"
-  sh "cd ~/Library/Android/sdk/tools && ./emulator -avd #{args[:emulator_name]} > /dev/null &"
-end
-
-
 task :clean do
   puts "limpando pasta reports..."
   system "rm -f reports/*.json"
@@ -39,19 +30,3 @@ task :check_ruby_version do
   puts 'Versao do Ruby ok'
 end
 
-task :tag => [:check_hub] do
-  cmd = TTY::Command.new(printer: :pretty, uuid: false)
-
-  ARGV.each { |a| task a.to_sym do ; end }
-  ENV['HUB'] = 'true'
-  platform = (ARGV.select {|x| ['android', 'ios'].include? x}).pop
-  env = (ARGV.select {|x| ['dev', 'pre'].include? x}).pop
-  tags = ARGV.select {|x| x.include? '@'}
-  params = [platform, env, tags].compact.flatten!
-  abort "Parametro incorreto! Favor informar plataforma, ambiente e feature" if params.size < 3
-  status = system "ruby config/selenium_hub/scripts/run_tags.rb #{platform} #{env} #{tags}"
-  abort unless status
-  # if cmd.run!("ruby config/selenium_hub/scripts/run_tags.rb #{platform} #{env} #{tags}").failure?
-  #   abort
-  # end
-end
