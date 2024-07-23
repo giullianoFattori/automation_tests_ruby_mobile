@@ -20,7 +20,7 @@ C:.
   │ └───step_definitions
   ├───ios
   │ └───screens
-  ├───screen```shots
+  ├───screenshots
   │ └───android
   └───support
   ├───caps
