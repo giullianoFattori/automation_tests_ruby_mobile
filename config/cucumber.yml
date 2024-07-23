@@ -1,0 +1,20 @@
+# config/cucumber.yml
+##YAML Template
+---
+android: PLATFORM=android -r features/support -r features/android -r features/common/step_definitions  --exclude features/ios --format pretty --strict
+
+ios: PLATFORM=ios SCREENSHOT_PATH=screenshots/ios/ -r features/support  -r features/ios -r features/common/step_definitions --exclude features/android -t @ios
+
+report: -f html -o reports/report.html
+
+ios-report: -p ios -f html -o reports/ios-report.html
+
+android-report: -p android -f html -o reports/android-report.html
+
+dev: BUILD=develop -t @dev
+
+hml: BUILD=homolog -t @hml 
+
+hub: HUB=true -t @done
+
+default: --format pretty --strict --tags ~@wip

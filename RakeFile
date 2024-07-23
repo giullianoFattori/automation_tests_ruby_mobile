@@ -1,0 +1,32 @@
+require 'cucumber/rake/task'
+require 'rubygems'
+require 'tty-command'
+require 'pry'
+
+desc('Running RuboCop Lints')
+task :lint do
+  system 'bundle exec rubocop -a > /dev/null'
+  system 'bundle exec rubocop'
+end
+
+task :clean do
+  puts "limpando pasta reports..."
+  system "rm -f reports/*.json"
+  puts "limpando pasta screenshots..."
+  system "rm -f screenshots/ios/*.png"
+  system "rm -f screenshots/android/*.png"
+  puts "limpando txt de rerun testes..."
+  system "rm rerun*.txt"
+  puts "limpando logs..."
+  system "rm *.log"
+  system "rm *.out"
+end
+
+task :check_ruby_version do
+  version = `ruby -v`
+  whichr = `which ruby`
+  puts "Ruby path: #{whichr}"
+  raise "versão do ruby encontrada #{version} nao é a desejada: 2.6.3" unless version.include? '2.6.3'
+  puts 'Versao do Ruby ok'
+end
+

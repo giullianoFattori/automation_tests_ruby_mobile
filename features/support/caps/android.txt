@@ -1,0 +1,24 @@
+
+[caps]
+    deviceName = "Android" 
+    platformName = "Android"
+    app = "C:/Users/giull/OneDrive/Anexos de email/Documentos/automacao-pessoal/automation_tests_ruby_mobile/config/app/android/Anki.apk"
+    appPackage = "com.ichi2.anki"
+    appActivity = "com.ichi2.anki.IntentHandler"
+    newCommandTimeout = 999999
+    #language = "pt"
+    #locale = "BR"
+    autoGrantPermissions = true
+    #noReset = false
+    automationName = "UiAutomator2"
+    adbExecTimeout = 999999
+    useNewWDA = true
+    #implicit = 1
+    appWaitActivity = "com.ichi2.anki.*"
+
+[appium_lib]
+    server_url = 'http://localhost:4723/wd/hub/'
+    wait_timeout = 60
+    wait_interval = 1
+
+
