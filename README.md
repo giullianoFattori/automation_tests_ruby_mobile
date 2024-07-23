@@ -5,26 +5,27 @@ Este projeto visa a padronização e a facilitação da automação de testes pa
 ## Estrutura do Projeto
 
 A estrutura do projeto está organizada da seguinte forma:
-
-C:.
-├───config
-│   └───app
-│       └───android
-└───features
-    ├───android
-    │   └───screens
-    ├───common
-    │   ├───environment
-    │   ├───modules
-    │   ├───specs
-    │   └───step_definitions
-    ├───ios
-    │   └───screens
-    ├───screenshots
-    │   └───android
-    └───support
-        ├───caps
-        └───helpers
+```sh
+    C:.
+    ├───config
+    │   └───app
+    │       └───android
+    └───features
+        ├───android
+        │   └───screens
+        ├───common
+        │   ├───environment
+        │   ├───modules
+        │   ├───specs
+        │   └───step_definitions
+        ├───ios
+        │   └───screens
+        ├───screenshots
+        │   └───android
+        └───support
+            ├───caps
+            └───helpers
+```
 
 ### Elementos de Tela
 
