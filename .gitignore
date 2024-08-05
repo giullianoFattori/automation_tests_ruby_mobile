@@ -12,13 +12,13 @@ screenshots/android/*
 screenshots/ios/*
 
 # apps
+Anki.app
+Anki.apk
+
 # config/app/
 
 # Caps files
 # features/support/caps/*.txt
 
-rerun*.txt
-*.log
-*.out
 .vscode
 *.swp
